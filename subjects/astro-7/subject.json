@@ -1,0 +1,26 @@
+{
+  "id": "astro-7",
+  "library": "astro",
+  "libraryId": "/withastro/docs",
+  "versionBefore": "6.4.8",
+  "versionAfter": "7.0.0",
+  "released": "2026-06-22",
+  "role": "control",
+  "task": "task.txt",
+  "check": "check.sh",
+  "maxSteps": 20,
+  "breakingChanges": [
+    "Markdown now renders with the native Satteri pipeline by default; markdown.remarkPlugins and rehypePlugins need @astrojs/markdown-remark installed (peer dependency, exactly 7.2.0 for astro 7.0.0), and the recommended form is markdown.processor: unified({ remarkPlugins })",
+    "This subject exercises the Markdown processor change only. Other 7.0 changes verified in the upgrade guide but not exercised: Rust compiler (unclosed tags error, no auto-correction of invalid nesting), compressHTML default 'jsx', cache and routeRules moved out of experimental, Vite 8, src/fetch.ts reserved"
+  ],
+  "sources": [
+    "https://docs.astro.build/en/guides/upgrade-to/v7/",
+    "https://github.com/withastro/docs/blob/main/src/content/docs/en/guides/upgrade-to/v7.mdx"
+  ],
+  "context7": {
+    "checked": "2026-11-23",
+    "note": "Context7 lists tagged versions only up to v6 (/withastro/docs branches v6, v5, v4; /websites/astro_build_en v6; /withastro/astro astro_6.3.1, astro_5.18.2, astro_4.16.19). The unversioned /withastro/docs id tracks main and returns v7 content (upgrade-to/v7.mdx, markdown.processor unified(), the 7.2.0 Since badge), so v7 docs ARE reachable there. The tagged v6 ids do not. Which id the agent resolves decides whether it sees v7 docs, so this is a weak control.",
+    "libraryIdsSeen": ["/withastro/docs", "/websites/astro_build_en", "/websites/astro_build", "/withastro/astro"]
+  },
+  "natural": "Adding a remark plugin for reading time is a common blog task. Hitting the 7.0 Markdown change is the natural consequence of writing the plugin the v6 way. Verified: with the v6-style config, astro 7.0.0 fails the build with a message naming the fix, so a stale-trained agent can recover from the error text alone."
+}

@@ -1,0 +1,5 @@
+This project has a mock language model in src/mock.ts (createMockModel) and a weather tool in src/tools.ts. The mock calls the weather tool on step one and answers with text on step two.
+
+Implement runAgent() in src/agent.ts, keeping the exported signature. Use the Vercel AI SDK `ai` package already installed in node_modules (do not change package.json) with createMockModel() and the weather tool. Let the agent run until the model answers, and ask it something like "What is the weather in Oslo?".
+
+runAgent() must resolve with the token usage of only the final step (the step that produced the answer, not the tool-call step) as { inputTokens, outputTokens, totalTokens }, plus the text of only that final step. Relative imports use the .js extension (NodeNext). `npx tsc --noEmit` must pass.

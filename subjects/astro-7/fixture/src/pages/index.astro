@@ -1,0 +1,18 @@
+---
+const posts = [
+  { href: '/posts/short/', title: 'Short note' },
+  { href: '/posts/medium/', title: 'Medium post' },
+  { href: '/posts/long/', title: 'Long post' },
+];
+---
+<html lang="en">
+  <head>
+    <title>Blog</title>
+  </head>
+  <body>
+    <h1>Blog</h1>
+    <ul>
+      {posts.map((p) => <li><a href={p.href}>{p.title}</a></li>)}
+    </ul>
+  </body>
+</html>

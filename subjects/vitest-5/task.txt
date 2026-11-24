@@ -1,0 +1,5 @@
+This folder is a small Node project that uses Vitest. src/notify.js exports notify(handler), which calls the handler once with a message.
+
+Write a test file at src/notify.test.js. Create a vi.fn() handler and call notify(handler) once in a beforeAll hook, as one-time setup. Then add a test that asserts the handler was called exactly once.
+
+Make sure `npm test` passes. Dependencies are already installed.

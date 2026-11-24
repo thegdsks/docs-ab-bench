@@ -1,0 +1,5 @@
+This is a small Astro blog. Each post in src/pages/posts/ is a Markdown file that uses the Post layout.
+
+I want every post page to show its estimated reading time as a paragraph like `<p id="reading-time">3 min read</p>` near the top of the page. Reading time is the number of words in the post body divided by 200, rounded up, and never less than 1 minute.
+
+Compute it in a remark plugin that you register in astro.config.mjs (the Markdown config), and have the layout display the result. Do not hardcode the numbers per post. Keep the Astro version in package.json as it is, and run `npm run build` to make sure the site builds.

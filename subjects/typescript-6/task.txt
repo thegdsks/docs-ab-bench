@@ -1,0 +1,3 @@
+This is a small Node command line project. It has TypeScript sources in src/ and a package.json, but no tsconfig.json yet. Dependencies are listed in package.json (run npm install first).
+
+Create a tsconfig.json so that `npx tsc` compiles src/ into dist/ without errors, and the compiled program runs with `node dist/index.js` and prints its report. Do not change the source files or package.json.

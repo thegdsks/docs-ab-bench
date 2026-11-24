@@ -1,0 +1,11 @@
+{
+  "id": "toy-hello",
+  "library": "toy",
+  "libraryId": "/toy/hello",
+  "versionBefore": "0.0.1",
+  "versionAfter": "0.0.2",
+  "role": "control",
+  "task": "task.txt",
+  "check": "check.sh",
+  "maxSteps": 5
+}

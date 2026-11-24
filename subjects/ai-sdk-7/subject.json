@@ -1,0 +1,25 @@
+{
+  "id": "ai-sdk-7",
+  "library": "ai",
+  "libraryId": "/vercel/ai/ai_7.0.0",
+  "versionBefore": "6.0.336",
+  "versionAfter": "7.0.0",
+  "released": "2026-06-25",
+  "role": "headline",
+  "task": "task.txt",
+  "check": "check.sh",
+  "maxSteps": 20,
+  "breakingChanges": [
+    "generateText/streamText result.usage now sums all steps (was final step only in 6.x); result.totalUsage is deprecated; final-step usage is result.finalStep.usage",
+    "result.content, toolCalls, toolResults, files, sources and warnings now accumulate across all steps; final-step values live under result.finalStep",
+    "stepCountIs renamed to isStepCount (old name kept as deprecated alias)",
+    "system option renamed to instructions (system kept as deprecated fallback)",
+    "onFinish callbacks renamed to onEnd",
+    "ESM only, require() no longer supported",
+    "Mock models in ai/test are MockLanguageModelV4 (spec v4)"
+  ],
+  "sources": [
+    "https://github.com/vercel/ai/blob/ai@7.0.0/content/docs/08-migration-guides/23-migration-guide-7-0.mdx",
+    "https://www.npmjs.com/package/ai/v/7.0.0"
+  ]
+}

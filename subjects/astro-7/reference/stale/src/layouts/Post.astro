@@ -1,0 +1,13 @@
+---
+const { frontmatter } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <h1>{frontmatter.title}</h1>
+    <p id="reading-time">{frontmatter.minutesRead} min read</p>
+    <slot />
+  </body>
+</html>

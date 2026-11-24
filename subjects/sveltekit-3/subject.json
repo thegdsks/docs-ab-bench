@@ -1,0 +1,22 @@
+{
+  "id": "sveltekit-3",
+  "library": "@sveltejs/kit",
+  "libraryId": "/sveltejs/kit/3.0.0",
+  "versionBefore": "2.70.3",
+  "versionAfter": "3.0.0",
+  "released": "2026-10-01",
+  "role": "headline",
+  "task": "task.txt",
+  "check": "check.sh",
+  "maxSteps": 20,
+  "breakingChanges": [
+    "svelte.config.js is no longer read (build fails with config_file_unsupported); options move to the sveltekit() plugin in vite.config.js, with former config.kit.* options at the top level",
+    "$app/stores is removed (build fails with app_stores_removed); use $app/state and read page.url.pathname without the $ prefix",
+    "Minimums: Node >=22.17, TypeScript ^6, Svelte ^5.57.1, Vite ^8.0.12, @sveltejs/vite-plugin-svelte ^7 (kit 3.0.0 peerDependencies and engines on npm)"
+  ],
+  "sources": [
+    "https://github.com/sveltejs/kit/blob/@sveltejs/kit@3.0.0/documentation/docs/60-appendix/35-migrating-to-sveltekit-3.md",
+    "https://github.com/sveltejs/kit/blob/@sveltejs/kit@3.0.0/packages/kit/messages/shared-errors/public.md",
+    "https://www.npmjs.com/package/@sveltejs/kit/v/3.0.0"
+  ]
+}

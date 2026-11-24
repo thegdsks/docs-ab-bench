@@ -1,0 +1,9 @@
+This is a React Router app in framework mode (see app/routes.ts). The route "/product" points at app/routes/product.tsx, which does not exist yet. Create it.
+
+The route module must:
+- export a `loader` that returns an object with a string `title` field, for example { title: "Blue Kettle" }
+- export a `meta` function that sets the page title to `<title> | Shop`, using the title from the loader data
+- export a middleware that sets the response header `X-Shop-Route: product` on the response
+- export a default component that renders the title in an h1
+
+Use the installed versions in package.json. Do not change package.json or the other files. When you are done, `npm run typecheck` must pass.

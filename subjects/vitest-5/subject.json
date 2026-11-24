@@ -1,0 +1,21 @@
+{
+  "id": "vitest-5",
+  "library": "vitest",
+  "libraryId": "/vitest-dev/vitest/v5.0.3",
+  "versionBefore": "4.1.12",
+  "versionAfter": "5.0.3",
+  "released": "2026-09-30",
+  "role": "headline",
+  "task": "task.txt",
+  "check": "check.sh",
+  "maxSteps": 20,
+  "breakingChanges": [
+    "clearMocks now defaults to true: vi.clearAllMocks() runs before every test, so calls recorded in a beforeAll hook are cleared before the test that asserts on them",
+    "Vitest 5 requires Node ^22.12.0 || ^24.0.0 || >=26.0.0"
+  ],
+  "sources": [
+    "https://github.com/vitest-dev/vitest/blob/v5.0.3/docs/guide/migration/index.md",
+    "https://github.com/vitest-dev/vitest/blob/v5.0.3/docs/config/clearmocks.md",
+    "https://github.com/vitest-dev/vitest/blob/v5.0.3/docs/blog/vitest-5.md"
+  ]
+}
