@@ -1,5 +1,7 @@
 Sponsored by Upstash. I built and ran this benchmark myself.
 
+<p align="center"><img src="assets/hero.png" alt="docs-ab-bench: does fresh documentation change a coding agent's result? A failing Vitest 5 test next to a passing run with Context7." width="100%"></p>
+
 # docs-ab-bench
 
 A small harness that runs the same coding task twice and records raw numbers.
