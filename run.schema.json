@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Run",
+  "description": "One agent attempt. Written to runs/<batch>/<subject>-<arm>-<n>.json. Raw numbers only, no scoring beyond pass.",
+  "type": "object",
+  "required": [
+    "subject",
+    "arm",
+    "n",
+    "driver",
+    "model",
+    "pass",
+    "mode",
+    "steps",
+    "tokens",
+    "durationMs",
+    "startedAt"
+  ],
+  "properties": {
+    "subject": {
+      "type": "string"
+    },
+    "arm": {
+      "enum": [
+        "baseline",
+        "context7"
+      ]
+    },
+    "n": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "driver": {
+      "enum": [
+        "ai-sdk",
+        "claude-code"
+      ]
+    },
+    "model": {
+      "type": "string"
+    },
+    "pass": {
+      "type": "boolean",
+      "description": "check.sh exit 0 at the end of the run"
+    },
+    "steps": {
+      "type": "integer"
+    },
+    "toolCalls": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "context7Calls": {
+      "type": "integer"
+    },
+    "tokens": {
+      "type": "object",
+      "required": [
+        "input",
+        "output",
+        "total"
+      ],
+      "properties": {
+        "input": {
+          "type": "integer"
+        },
+        "output": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        }
+      }
+    },
+    "costUsd": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "durationMs": {
+      "type": "integer"
+    },
+    "checkOutput": {
+      "type": "string"
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mode": {
+      "enum": [
+        "oneshot",
+        "agentic"
+      ],
+      "description": "oneshot: file tools only, check runs once at the end (the first-try metric). agentic: shell allowed, up to maxSteps."
+    }
+  }
+}

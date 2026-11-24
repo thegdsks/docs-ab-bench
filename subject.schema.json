@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Subject",
+  "description": "One experiment subject. Lives at subjects/<id>/subject.json next to task.txt, fixture/, check.sh and reference/.",
+  "type": "object",
+  "required": ["id", "library", "libraryId", "versionBefore", "versionAfter", "task", "check", "maxSteps"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "library": { "type": "string" },
+    "libraryId": { "type": "string", "description": "Context7 library id, for example /sveltejs/kit/3.1.1" },
+    "versionBefore": { "type": "string" },
+    "versionAfter": { "type": "string", "description": "Exact version pinned in fixture/package.json" },
+    "released": { "type": "string", "description": "ISO date of versionAfter" },
+    "role": { "enum": ["headline", "control"] },
+    "task": { "type": "string", "description": "Path to the prompt text given to the agent, relative to the subject folder" },
+    "check": { "type": "string", "description": "Executable run inside the agent workdir after it finishes. Exit 0 means pass. Prints one JSON line to stdout." },
+    "maxSteps": { "type": "integer", "minimum": 1 },
+    "breakingChanges": { "type": "array", "items": { "type": "string" } },
+    "sources": { "type": "array", "items": { "type": "string", "format": "uri" } }
+  }
+}
