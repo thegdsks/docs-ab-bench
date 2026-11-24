@@ -1,0 +1,30 @@
+{
+  "subject": "astro-7",
+  "arm": "context7",
+  "n": 1,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": false,
+  "steps": 20,
+  "toolCalls": {
+    "Glob": 4,
+    "mcp__context7__resolve-library-id": 2,
+    "mcp__context7__query-docs": 4,
+    "Read": 5,
+    "Grep": 1,
+    "Write": 2,
+    "Edit": 1
+  },
+  "context7Calls": 6,
+  "tokens": {
+    "input": 149130,
+    "output": 4485,
+    "total": 153615
+  },
+  "costUsd": 0.1368222,
+  "durationMs": 33831,
+  "checkOutput": "{\"pass\":false,\"detail\":\"short: no #reading-time \\\"N min read\\\"; medium: no #reading-time \\\"N min read\\\"; long: no #reading-time \\\"N min read\\\"\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:35:44.485Z",
+  "mode": "oneshot"
+}

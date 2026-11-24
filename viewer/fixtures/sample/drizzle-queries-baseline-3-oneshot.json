@@ -1,0 +1,25 @@
+{
+  "subject": "drizzle-queries",
+  "arm": "baseline",
+  "n": 3,
+  "driver": "ai-sdk",
+  "model": "sample-model-not-real",
+  "pass": false,
+  "mode": "oneshot",
+  "steps": 5,
+  "toolCalls": {
+    "readFile": 5,
+    "writeFile": 2
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 15231,
+    "output": 1600,
+    "total": 16831
+  },
+  "costUsd": null,
+  "durationMs": 25344,
+  "checkOutput": "SAMPLE DATA, not a real result",
+  "error": null,
+  "startedAt": "2026-01-01T10:26:00.000Z"
+}

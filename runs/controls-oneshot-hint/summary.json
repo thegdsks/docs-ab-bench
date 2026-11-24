@@ -1,0 +1,114 @@
+{
+  "batch": "controls-oneshot-hint",
+  "totalRuns": 30,
+  "subjects": {
+    "astro-7": {
+      "oneshot": {
+        "drivers": [
+          "claude-code"
+        ],
+        "models": [
+          "sonnet"
+        ],
+        "baseline": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 160902.4,
+          "tokensMedian": 127347,
+          "stepsMean": 22,
+          "durationMsMean": 36218.4,
+          "context7CallsMean": 0
+        },
+        "context7": {
+          "runs": 5,
+          "passRate": 0.8,
+          "tokensMean": 148408,
+          "tokensMedian": 153615,
+          "stepsMean": 21.6,
+          "durationMsMean": 32837.4,
+          "context7CallsMean": 2.6
+        },
+        "delta": {
+          "passRate": -0.19999999999999996,
+          "tokensMean": -12494.399999999994,
+          "tokensMedian": 26268,
+          "stepsMean": -0.3999999999999986,
+          "durationMsMean": -3381,
+          "context7CallsMean": 2.6
+        }
+      }
+    },
+    "react-router-8": {
+      "oneshot": {
+        "drivers": [
+          "claude-code"
+        ],
+        "models": [
+          "sonnet"
+        ],
+        "baseline": {
+          "runs": 5,
+          "passRate": 0.6,
+          "tokensMean": 52585.2,
+          "tokensMedian": 48814,
+          "stepsMean": 10.6,
+          "durationMsMean": 15499.6,
+          "context7CallsMean": 0
+        },
+        "context7": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 76832.8,
+          "tokensMedian": 67170,
+          "stepsMean": 10.2,
+          "durationMsMean": 29761.4,
+          "context7CallsMean": 2.6
+        },
+        "delta": {
+          "passRate": 0.4,
+          "tokensMean": 24247.600000000006,
+          "tokensMedian": 18356,
+          "stepsMean": -0.40000000000000036,
+          "durationMsMean": 14261.800000000001,
+          "context7CallsMean": 2.6
+        }
+      }
+    },
+    "typescript-6": {
+      "oneshot": {
+        "drivers": [
+          "claude-code"
+        ],
+        "models": [
+          "sonnet"
+        ],
+        "baseline": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 37191,
+          "tokensMedian": 36837,
+          "stepsMean": 6.8,
+          "durationMsMean": 12237.4,
+          "context7CallsMean": 0
+        },
+        "context7": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 52459.2,
+          "tokensMedian": 44707,
+          "stepsMean": 9,
+          "durationMsMean": 15507.6,
+          "context7CallsMean": 2
+        },
+        "delta": {
+          "passRate": 0,
+          "tokensMean": 15268.199999999997,
+          "tokensMedian": 7870,
+          "stepsMean": 2.2,
+          "durationMsMean": 3270.2000000000007,
+          "context7CallsMean": 2
+        }
+      }
+    }
+  }
+}

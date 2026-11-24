@@ -1,0 +1,25 @@
+{
+  "subject": "tailwind-v4-config",
+  "arm": "baseline",
+  "n": 3,
+  "driver": "ai-sdk",
+  "model": "sample-model-not-real",
+  "pass": true,
+  "mode": "oneshot",
+  "steps": 5,
+  "toolCalls": {
+    "readFile": 5,
+    "writeFile": 2
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 12982,
+    "output": 2741,
+    "total": 15723
+  },
+  "costUsd": null,
+  "durationMs": 32806,
+  "checkOutput": "SAMPLE DATA, not a real result",
+  "error": null,
+  "startedAt": "2026-01-01T10:20:00.000Z"
+}

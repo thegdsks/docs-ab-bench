@@ -1,0 +1,26 @@
+{
+  "subject": "ai-sdk-7",
+  "arm": "context7",
+  "n": 3,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 6,
+  "toolCalls": {
+    "mcp__context7__resolve-library-id": 1,
+    "Bash": 3,
+    "mcp__context7__query-docs": 1
+  },
+  "context7Calls": 2,
+  "tokens": {
+    "input": 80122,
+    "output": 1772,
+    "total": 81894
+  },
+  "costUsd": 0.0697705,
+  "durationMs": 16787,
+  "checkOutput": "{\"pass\":true,\"detail\":\"type-check ok, final-step usage and text match\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:27:40.858Z",
+  "mode": "agentic"
+}

@@ -1,0 +1,25 @@
+{
+  "subject": "zod-v4-migrate",
+  "arm": "baseline",
+  "n": 2,
+  "driver": "ai-sdk",
+  "model": "sample-model-not-real",
+  "pass": false,
+  "mode": "agentic",
+  "steps": 8,
+  "toolCalls": {
+    "readFile": 8,
+    "writeFile": 2
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 39672,
+    "output": 4203,
+    "total": 43875
+  },
+  "costUsd": null,
+  "durationMs": 73892,
+  "checkOutput": "SAMPLE DATA, not a real result",
+  "error": null,
+  "startedAt": "2026-01-01T10:39:00.000Z"
+}

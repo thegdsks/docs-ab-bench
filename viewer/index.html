@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Docs A/B Results</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+<body class="bg-stone-50 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+  <a href="#results" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded focus:bg-neutral-900 focus:px-3 focus:py-2 focus:text-white">Skip to results</a>
+  <div class="mx-auto w-[1200px] px-10 pb-16 pt-10">
+    <header class="border-b border-neutral-300 pb-6 dark:border-neutral-800">
+      <p class="font-mono text-xs uppercase tracking-widest text-neutral-600 dark:text-neutral-400">docs-ab-bench</p>
+      <div class="mt-2 flex items-end justify-between gap-8">
+        <h1 class="text-4xl font-semibold tracking-tight">Does fresh documentation change the outcome?</h1>
+        <p id="batch-meta" class="shrink-0 text-right font-mono text-xs text-neutral-600 dark:text-neutral-400"></p>
+      </div>
+      <p id="sample-note" hidden class="mt-4 inline-block rounded border border-amber-700 bg-amber-100 px-3 py-1.5 text-sm font-medium text-amber-900 dark:border-amber-400 dark:bg-amber-950 dark:text-amber-200">Sample data, not real results</p>
+    </header>
+
+    <section aria-label="Load runs" class="mt-6">
+      <div id="drop" class="flex items-center justify-between gap-6 rounded-lg border border-dashed border-neutral-400 px-5 py-4 transition-colors data-[over=true]:border-emerald-600 data-[over=true]:bg-emerald-50 dark:border-neutral-600 dark:data-[over=true]:bg-emerald-950">
+        <p class="text-sm text-neutral-700 dark:text-neutral-300">Drop a batch folder of run JSON files here (for example <span class="font-mono">runs/2026-01-01/</span>), or choose one. Everything is computed in your browser.</p>
+        <div class="flex shrink-0 items-center gap-3">
+          <label class="cursor-pointer rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-emerald-600 hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300">
+            Choose folder
+            <input id="picker" type="file" webkitdirectory multiple class="sr-only">
+          </label>
+          <button id="load-sample" type="button" class="rounded-md border border-neutral-400 px-4 py-2 text-sm font-medium hover:bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-neutral-600 dark:hover:bg-neutral-800">Load sample data</button>
+        </div>
+      </div>
+      <p id="status" role="status" class="mt-2 min-h-5 text-sm text-neutral-600 dark:text-neutral-400"></p>
+    </section>
+
+    <main id="results" tabindex="-1" class="mt-4 focus:outline-none" hidden>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span id="mode-label" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">Mode</span>
+          <div id="mode-toggle" role="group" aria-labelledby="mode-label" class="inline-flex rounded-md border border-neutral-400 p-0.5 dark:border-neutral-600"></div>
+          <label id="batch-wrap" hidden class="flex items-center gap-2 text-sm text-neutral-700 dark:text-neutral-300">Batch
+            <select id="batch-select" class="rounded border border-neutral-400 bg-transparent px-2 py-1 font-mono text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-600 dark:border-neutral-600"></select>
+          </label>
+        </div>
+        <ul class="flex items-center gap-5 text-sm" aria-label="Legend">
+          <li class="flex items-center gap-2"><span class="inline-block size-3 rounded-sm bg-neutral-500 dark:bg-neutral-400"></span>baseline</li>
+          <li class="flex items-center gap-2"><span class="inline-block size-3 rounded-sm bg-emerald-700 dark:bg-emerald-400"></span>context7</li>
+        </ul>
+      </div>
+
+      <p id="mode-hint" class="mt-3 text-sm text-neutral-600 dark:text-neutral-400"></p>
+
+      <section aria-labelledby="h-head" class="mt-6">
+        <h2 id="h-head" class="sr-only">Headline numbers</h2>
+        <div id="headline" class="grid grid-cols-4 gap-4"></div>
+      </section>
+
+      <section aria-labelledby="h-subj" class="mt-10">
+        <h2 id="h-subj" class="text-xl font-semibold tracking-tight">By subject</h2>
+        <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Pass is shown as passed/runs. Delta is context7 minus baseline.</p>
+        <div id="table" class="mt-4 overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-800"></div>
+      </section>
+
+      <section aria-labelledby="h-charts" class="mt-10">
+        <h2 id="h-charts" class="text-xl font-semibold tracking-tight">Charts</h2>
+        <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Bars show the mean per subject. Whiskers show the min to max of the individual runs.</p>
+        <div id="charts" class="mt-4 grid grid-cols-2 gap-6"></div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

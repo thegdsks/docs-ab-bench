@@ -1,0 +1,25 @@
+{
+  "subject": "ai-sdk-7",
+  "arm": "baseline",
+  "n": 5,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 10,
+  "toolCalls": {
+    "Read": 3,
+    "Bash": 6
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 121040,
+    "output": 2384,
+    "total": 123424
+  },
+  "costUsd": 0.0959448,
+  "durationMs": 20329,
+  "checkOutput": "{\"pass\":true,\"detail\":\"type-check ok, final-step usage and text match\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:28:37.014Z",
+  "mode": "agentic"
+}

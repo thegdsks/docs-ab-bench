@@ -1,0 +1,27 @@
+{
+  "subject": "react-router-8",
+  "arm": "baseline",
+  "n": 4,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": false,
+  "steps": 15,
+  "toolCalls": {
+    "Read": 4,
+    "Glob": 4,
+    "Grep": 5,
+    "Write": 1
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 69979,
+    "output": 2694,
+    "total": 72673
+  },
+  "costUsd": 0.0688539,
+  "durationMs": 20697,
+  "checkOutput": "{\"pass\":false,\"detail\":\"typecheck failed: app/routes/product.tsx(15,24): error TS2339: Property 'data' does not exist on type 'CreateMetaArgs<Info & { module: typeof import(\\\"/private/var/folders/q1/lxypk7fd4f17l9pcrw323nym0000gn/T/docs-ab-ben \"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:33:34.596Z",
+  "mode": "oneshot"
+}

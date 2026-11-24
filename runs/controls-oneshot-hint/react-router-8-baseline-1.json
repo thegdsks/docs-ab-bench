@@ -1,0 +1,27 @@
+{
+  "subject": "react-router-8",
+  "arm": "baseline",
+  "n": 1,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 8,
+  "toolCalls": {
+    "Read": 3,
+    "Glob": 1,
+    "Grep": 2,
+    "Write": 1
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 39832,
+    "output": 1758,
+    "total": 41590
+  },
+  "costUsd": 0.044327,
+  "durationMs": 13580,
+  "checkOutput": "{\"pass\":true,\"detail\":\"typecheck and behaviour test passed (meta title from loaderData, X-Shop-Route header)\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:30:24.349Z",
+  "mode": "oneshot"
+}

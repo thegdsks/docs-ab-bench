@@ -1,0 +1,27 @@
+{
+  "subject": "react-router-8",
+  "arm": "context7",
+  "n": 3,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 8,
+  "toolCalls": {
+    "Read": 3,
+    "mcp__context7__resolve-library-id": 1,
+    "mcp__context7__query-docs": 2,
+    "Write": 1
+  },
+  "context7Calls": 3,
+  "tokens": {
+    "input": 58294,
+    "output": 1408,
+    "total": 59702
+  },
+  "costUsd": 0.053838899999999995,
+  "durationMs": 13534,
+  "checkOutput": "{\"pass\":true,\"detail\":\"typecheck and behaviour test passed (meta title from loaderData, X-Shop-Route header)\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:33:09.057Z",
+  "mode": "oneshot"
+}

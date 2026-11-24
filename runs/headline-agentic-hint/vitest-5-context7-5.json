@@ -1,0 +1,28 @@
+{
+  "subject": "vitest-5",
+  "arm": "context7",
+  "n": 5,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 9,
+  "toolCalls": {
+    "mcp__context7__resolve-library-id": 1,
+    "Read": 1,
+    "mcp__context7__query-docs": 1,
+    "Bash": 3,
+    "Write": 2
+  },
+  "context7Calls": 2,
+  "tokens": {
+    "input": 74851,
+    "output": 1584,
+    "total": 76435
+  },
+  "costUsd": 0.0627536,
+  "durationMs": 15507,
+  "checkOutput": "{\"pass\":true,\"detail\":\"passed 1/1\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:25:43.285Z",
+  "mode": "agentic"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "docs-ab-bench-viewer",
+  "private": true,
+  "type": "module",
+  "scripts": { "validate": "node validate-fixtures.mjs" },
+  "devDependencies": { "ajv": "8.17.1", "ajv-formats": "3.0.1" }
+}

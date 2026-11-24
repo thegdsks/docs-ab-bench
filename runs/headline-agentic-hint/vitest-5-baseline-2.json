@@ -1,0 +1,26 @@
+{
+  "subject": "vitest-5",
+  "arm": "baseline",
+  "n": 2,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 9,
+  "toolCalls": {
+    "Read": 1,
+    "Bash": 5,
+    "Write": 2
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 73741,
+    "output": 1681,
+    "total": 75422
+  },
+  "costUsd": 0.0606836,
+  "durationMs": 15483,
+  "checkOutput": "{\"pass\":true,\"detail\":\"passed 1/1\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:23:24.446Z",
+  "mode": "agentic"
+}

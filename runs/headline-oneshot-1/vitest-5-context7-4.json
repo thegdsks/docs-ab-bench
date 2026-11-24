@@ -1,0 +1,26 @@
+{
+  "subject": "vitest-5",
+  "arm": "context7",
+  "n": 4,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": false,
+  "steps": 5,
+  "toolCalls": {
+    "Read": 2,
+    "Glob": 1,
+    "Write": 1
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 39212,
+    "output": 771,
+    "total": 39983
+  },
+  "costUsd": 0.034344400000000004,
+  "durationMs": 7016,
+  "checkOutput": "{\"pass\":false,\"detail\":\"failed=1 passed=0 calls the handler exactly once: AssertionError: expected vi.fn() to be called 1 times, but got 0 times\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T04:43:35.549Z",
+  "mode": "oneshot"
+}

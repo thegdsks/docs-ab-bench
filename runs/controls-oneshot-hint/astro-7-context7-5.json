@@ -1,0 +1,29 @@
+{
+  "subject": "astro-7",
+  "arm": "context7",
+  "n": 5,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 23,
+  "toolCalls": {
+    "Glob": 6,
+    "mcp__context7__resolve-library-id": 1,
+    "Read": 5,
+    "Grep": 6,
+    "Write": 2,
+    "Edit": 2
+  },
+  "context7Calls": 1,
+  "tokens": {
+    "input": 160512,
+    "output": 5165,
+    "total": 165677
+  },
+  "costUsd": 0.12991679999999997,
+  "durationMs": 33107,
+  "checkOutput": "{\"pass\":true,\"detail\":\"astro 7.0.0 built; reading time 1/2/3 min correct on short/medium/long\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:41:12.966Z",
+  "mode": "oneshot"
+}

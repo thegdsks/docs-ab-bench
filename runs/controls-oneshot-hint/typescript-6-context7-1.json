@@ -1,0 +1,28 @@
+{
+  "subject": "typescript-6",
+  "arm": "context7",
+  "n": 1,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 9,
+  "toolCalls": {
+    "Read": 3,
+    "Glob": 2,
+    "mcp__context7__resolve-library-id": 1,
+    "mcp__context7__query-docs": 1,
+    "Write": 1
+  },
+  "context7Calls": 2,
+  "tokens": {
+    "input": 42956,
+    "output": 1751,
+    "total": 44707
+  },
+  "costUsd": 0.0509031,
+  "durationMs": 14116,
+  "checkOutput": "{\"pass\":true,\"detail\":\"tsc ok, dist/index.js ran with expected output\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:18:33.925Z",
+  "mode": "oneshot"
+}

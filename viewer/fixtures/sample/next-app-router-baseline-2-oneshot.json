@@ -1,0 +1,25 @@
+{
+  "subject": "next-app-router",
+  "arm": "baseline",
+  "n": 2,
+  "driver": "ai-sdk",
+  "model": "sample-model-not-real",
+  "pass": false,
+  "mode": "oneshot",
+  "steps": 3,
+  "toolCalls": {
+    "readFile": 3,
+    "writeFile": 2
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 9549,
+    "output": 1356,
+    "total": 10905
+  },
+  "costUsd": null,
+  "durationMs": 35653,
+  "checkOutput": "SAMPLE DATA, not a real result",
+  "error": null,
+  "startedAt": "2026-01-01T10:01:00.000Z"
+}

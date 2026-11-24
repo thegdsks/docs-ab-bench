@@ -1,0 +1,26 @@
+{
+  "subject": "typescript-6",
+  "arm": "baseline",
+  "n": 2,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 7,
+  "toolCalls": {
+    "Read": 3,
+    "Glob": 2,
+    "Write": 1
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 43976,
+    "output": 1537,
+    "total": 45513
+  },
+  "costUsd": 0.0446998,
+  "durationMs": 13533,
+  "checkOutput": "{\"pass\":true,\"detail\":\"tsc ok, dist/index.js ran with expected output\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:18:49.989Z",
+  "mode": "oneshot"
+}

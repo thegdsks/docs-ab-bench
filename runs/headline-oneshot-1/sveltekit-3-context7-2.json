@@ -1,0 +1,29 @@
+{
+  "subject": "sveltekit-3",
+  "arm": "context7",
+  "n": 2,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 15,
+  "toolCalls": {
+    "Glob": 2,
+    "Read": 2,
+    "Grep": 2,
+    "mcp__context7__resolve-library-id": 1,
+    "mcp__context7__query-docs": 1,
+    "Write": 6
+  },
+  "context7Calls": 2,
+  "tokens": {
+    "input": 94176,
+    "output": 2978,
+    "total": 97154
+  },
+  "costUsd": 0.08698750000000001,
+  "durationMs": 24095,
+  "checkOutput": "{\"pass\":true,\"detail\":\"build ok, build/about.html renders pathname /about\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T04:35:02.514Z",
+  "mode": "oneshot"
+}

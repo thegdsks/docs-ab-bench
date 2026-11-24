@@ -1,0 +1,27 @@
+{
+  "subject": "sveltekit-3",
+  "arm": "baseline",
+  "n": 3,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": false,
+  "steps": 16,
+  "toolCalls": {
+    "Glob": 3,
+    "Read": 2,
+    "Grep": 3,
+    "Write": 7
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 74489,
+    "output": 3251,
+    "total": 77740
+  },
+  "costUsd": 0.0937003,
+  "durationMs": 21537,
+  "checkOutput": "{\"pass\":false,\"detail\":\"build failed: SvelteKit error: config_file_unsupported\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T04:35:28.917Z",
+  "mode": "oneshot"
+}

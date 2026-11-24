@@ -1,0 +1,114 @@
+{
+  "batch": "headline-agentic-hint",
+  "totalRuns": 30,
+  "subjects": {
+    "ai-sdk-7": {
+      "agentic": {
+        "drivers": [
+          "claude-code"
+        ],
+        "models": [
+          "sonnet"
+        ],
+        "baseline": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 95399.4,
+          "tokensMedian": 103869,
+          "stepsMean": 7.6,
+          "durationMsMean": 17124.8,
+          "context7CallsMean": 0
+        },
+        "context7": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 105192.8,
+          "tokensMedian": 99765,
+          "stepsMean": 7.4,
+          "durationMsMean": 20486.6,
+          "context7CallsMean": 2
+        },
+        "delta": {
+          "passRate": 0,
+          "tokensMean": 9793.400000000009,
+          "tokensMedian": -4104,
+          "stepsMean": -0.1999999999999993,
+          "durationMsMean": 3361.7999999999993,
+          "context7CallsMean": 2
+        }
+      }
+    },
+    "sveltekit-3": {
+      "agentic": {
+        "drivers": [
+          "claude-code"
+        ],
+        "models": [
+          "sonnet"
+        ],
+        "baseline": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 49239.2,
+          "tokensMedian": 46916,
+          "stepsMean": 4.2,
+          "durationMsMean": 14128.2,
+          "context7CallsMean": 0
+        },
+        "context7": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 74075.2,
+          "tokensMedian": 76730,
+          "stepsMean": 6.4,
+          "durationMsMean": 17959.8,
+          "context7CallsMean": 2
+        },
+        "delta": {
+          "passRate": 0,
+          "tokensMean": 24836,
+          "tokensMedian": 29814,
+          "stepsMean": 2.2,
+          "durationMsMean": 3831.5999999999985,
+          "context7CallsMean": 2
+        }
+      }
+    },
+    "vitest-5": {
+      "agentic": {
+        "drivers": [
+          "claude-code"
+        ],
+        "models": [
+          "sonnet"
+        ],
+        "baseline": {
+          "runs": 5,
+          "passRate": 0.6,
+          "tokensMean": 105839.6,
+          "tokensMedian": 87536,
+          "stepsMean": 10.8,
+          "durationMsMean": 19673,
+          "context7CallsMean": 0
+        },
+        "context7": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 98143,
+          "tokensMedian": 77158,
+          "stepsMean": 10.4,
+          "durationMsMean": 17607.2,
+          "context7CallsMean": 2.2
+        },
+        "delta": {
+          "passRate": 0.4,
+          "tokensMean": -7696.600000000006,
+          "tokensMedian": -10378,
+          "stepsMean": -0.40000000000000036,
+          "durationMsMean": -2065.7999999999993,
+          "context7CallsMean": 2.2
+        }
+      }
+    }
+  }
+}

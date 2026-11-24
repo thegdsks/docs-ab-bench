@@ -1,0 +1,27 @@
+{
+  "subject": "sveltekit-3",
+  "arm": "baseline",
+  "n": 2,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 14,
+  "toolCalls": {
+    "Glob": 2,
+    "Read": 2,
+    "Grep": 3,
+    "Write": 6
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 62860,
+    "output": 2883,
+    "total": 65743
+  },
+  "costUsd": 0.0768922,
+  "durationMs": 19648,
+  "checkOutput": "{\"pass\":true,\"detail\":\"build ok, build/about.html renders pathname /about\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T04:44:49.139Z",
+  "mode": "oneshot"
+}

@@ -1,0 +1,26 @@
+{
+  "subject": "prisma-relations",
+  "arm": "context7",
+  "n": 1,
+  "driver": "ai-sdk",
+  "model": "sample-model-not-real",
+  "pass": true,
+  "mode": "oneshot",
+  "steps": 4,
+  "toolCalls": {
+    "readFile": 4,
+    "writeFile": 2,
+    "context7.query-docs": 1
+  },
+  "context7Calls": 1,
+  "tokens": {
+    "input": 19084,
+    "output": 2132,
+    "total": 21216
+  },
+  "costUsd": null,
+  "durationMs": 34286,
+  "checkOutput": "SAMPLE DATA, not a real result",
+  "error": null,
+  "startedAt": "2026-01-01T10:09:00.000Z"
+}

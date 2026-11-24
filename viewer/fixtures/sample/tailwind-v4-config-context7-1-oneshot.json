@@ -1,0 +1,26 @@
+{
+  "subject": "tailwind-v4-config",
+  "arm": "context7",
+  "n": 1,
+  "driver": "ai-sdk",
+  "model": "sample-model-not-real",
+  "pass": true,
+  "mode": "oneshot",
+  "steps": 6,
+  "toolCalls": {
+    "readFile": 6,
+    "writeFile": 2,
+    "context7.query-docs": 4
+  },
+  "context7Calls": 4,
+  "tokens": {
+    "input": 16278,
+    "output": 2044,
+    "total": 18322
+  },
+  "costUsd": null,
+  "durationMs": 18641,
+  "checkOutput": "SAMPLE DATA, not a real result",
+  "error": null,
+  "startedAt": "2026-01-01T10:21:00.000Z"
+}

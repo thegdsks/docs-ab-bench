@@ -1,0 +1,28 @@
+{
+  "subject": "astro-7",
+  "arm": "baseline",
+  "n": 4,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": true,
+  "steps": 24,
+  "toolCalls": {
+    "Glob": 6,
+    "Read": 7,
+    "Grep": 6,
+    "Write": 2,
+    "Edit": 2
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 162887,
+    "output": 5629,
+    "total": 168516
+  },
+  "costUsd": 0.1430739,
+  "durationMs": 36408,
+  "checkOutput": "{\"pass\":true,\"detail\":\"astro 7.0.0 built; reading time 1/2/3 min correct on short/medium/long\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:38:54.390Z",
+  "mode": "oneshot"
+}

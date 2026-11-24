@@ -1,0 +1,114 @@
+{
+  "batch": "headline-oneshot-1",
+  "totalRuns": 30,
+  "subjects": {
+    "ai-sdk-7": {
+      "oneshot": {
+        "drivers": [
+          "claude-code"
+        ],
+        "models": [
+          "sonnet"
+        ],
+        "baseline": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 57636.2,
+          "tokensMedian": 54105,
+          "stepsMean": 10,
+          "durationMsMean": 16390.8,
+          "context7CallsMean": 0
+        },
+        "context7": {
+          "runs": 5,
+          "passRate": 1,
+          "tokensMean": 76497.6,
+          "tokensMedian": 70927,
+          "stepsMean": 11.6,
+          "durationMsMean": 19020.4,
+          "context7CallsMean": 0
+        },
+        "delta": {
+          "passRate": 0,
+          "tokensMean": 18861.40000000001,
+          "tokensMedian": 16822,
+          "stepsMean": 1.5999999999999996,
+          "durationMsMean": 2629.600000000002,
+          "context7CallsMean": 0
+        }
+      }
+    },
+    "sveltekit-3": {
+      "oneshot": {
+        "drivers": [
+          "claude-code"
+        ],
+        "models": [
+          "sonnet"
+        ],
+        "baseline": {
+          "runs": 5,
+          "passRate": 0.8,
+          "tokensMean": 105558.8,
+          "tokensMedian": 95860,
+          "stepsMean": 18,
+          "durationMsMean": 25531.2,
+          "context7CallsMean": 0
+        },
+        "context7": {
+          "runs": 5,
+          "passRate": 0.6,
+          "tokensMean": 86708.4,
+          "tokensMedian": 89126,
+          "stepsMean": 15.4,
+          "durationMsMean": 22276,
+          "context7CallsMean": 0.6
+        },
+        "delta": {
+          "passRate": -0.20000000000000007,
+          "tokensMean": -18850.40000000001,
+          "tokensMedian": -6734,
+          "stepsMean": -2.5999999999999996,
+          "durationMsMean": -3255.2000000000007,
+          "context7CallsMean": 0.6
+        }
+      }
+    },
+    "vitest-5": {
+      "oneshot": {
+        "drivers": [
+          "claude-code"
+        ],
+        "models": [
+          "sonnet"
+        ],
+        "baseline": {
+          "runs": 5,
+          "passRate": 0,
+          "tokensMean": 36276.4,
+          "tokensMedian": 34042,
+          "stepsMean": 5.4,
+          "durationMsMean": 7206.8,
+          "context7CallsMean": 0
+        },
+        "context7": {
+          "runs": 5,
+          "passRate": 0.4,
+          "tokensMean": 39204.6,
+          "tokensMedian": 39983,
+          "stepsMean": 6,
+          "durationMsMean": 9041.8,
+          "context7CallsMean": 0.6
+        },
+        "delta": {
+          "passRate": 0.4,
+          "tokensMean": 2928.199999999997,
+          "tokensMedian": 5941,
+          "stepsMean": 0.5999999999999996,
+          "durationMsMean": 1834.999999999999,
+          "context7CallsMean": 0.6
+        }
+      }
+    }
+  }
+}

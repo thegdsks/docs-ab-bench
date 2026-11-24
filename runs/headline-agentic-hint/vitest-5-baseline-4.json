@@ -1,0 +1,26 @@
+{
+  "subject": "vitest-5",
+  "arm": "baseline",
+  "n": 4,
+  "driver": "claude-code",
+  "model": "sonnet",
+  "pass": false,
+  "steps": 8,
+  "toolCalls": {
+    "Read": 1,
+    "Bash": 5,
+    "Write": 1
+  },
+  "context7Calls": 0,
+  "tokens": {
+    "input": 71288,
+    "output": 1807,
+    "total": 73095
+  },
+  "costUsd": 0.057728100000000004,
+  "durationMs": 16544,
+  "checkOutput": "{\"pass\":false,\"detail\":\"test file has no expect on a mock\"}\n",
+  "error": null,
+  "startedAt": "2026-11-24T05:24:41.276Z",
+  "mode": "agentic"
+}
