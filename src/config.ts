@@ -1,4 +1,5 @@
 export type Arm = "baseline" | "context7";
+export type HintPlacement = "prompt" | "claude-md";
 export type Mode = "oneshot" | "agentic";
 export type DriverName = "ai-sdk" | "claude-code";
 
@@ -7,6 +8,7 @@ export interface BenchConfig {
   model: string | undefined;
   mode: Mode;
   docsHint: boolean;
+  docsHintPlacement: HintPlacement;
   driver: DriverName;
   maxStepsOverride: number | undefined;
   agentTimeoutMs: number;
@@ -57,6 +59,11 @@ export function parseMode(value: string): Mode {
   throw new Error(`mode must be oneshot or agentic, got "${value}"`);
 }
 
+export function parsePlacement(value: string): HintPlacement {
+  if (value === "prompt" || value === "claude-md") return value;
+  throw new Error(`BENCH_DOCS_HINT_PLACEMENT must be prompt or claude-md, got "${value}"`);
+}
+
 export function parseDriver(value: string): DriverName {
   if (value === "ai-sdk" || value === "claude-code") return value;
   throw new Error(`driver must be ai-sdk or claude-code, got "${value}"`);
@@ -68,6 +75,7 @@ export function loadConfig(env: Env = process.env): BenchConfig {
     model: env["BENCH_MODEL"] || undefined,
     mode: parseMode(env["BENCH_MODE"] || "oneshot"),
     docsHint: env["BENCH_DOCS_HINT"] === "1",
+    docsHintPlacement: parsePlacement(env["BENCH_DOCS_HINT_PLACEMENT"] || "prompt"),
     driver: parseDriver(env["BENCH_DRIVER"] || "ai-sdk"),
     maxStepsOverride: optionalPositiveInt(env, "BENCH_MAX_STEPS"),
     agentTimeoutMs: positiveInt(env, "BENCH_AGENT_TIMEOUT_MS", FALLBACK.agentTimeoutMs),

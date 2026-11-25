@@ -49,6 +49,8 @@ Flags:
 
 Set `BENCH_DOCS_HINT=1` to add one line to the context7 arm's prompt: "Before you write code, use the Context7 tools to look up the current documentation for the libraries involved." Without it, the tool is available but the agent often never calls it. Use a different `--batch` name for each setting so runs stay separable.
 
+Set `BENCH_DOCS_HINT_PLACEMENT=claude-md` to put that line in a `CLAUDE.md` file in the project folder instead of the prompt. The prompt is then identical for both arms.
+
 Dependencies of each subject are installed once into a cache under the system temp folder and cloned into every run.
 
 `npx tsx src/cli.ts verify [--subject <id|all>]` prepares each workdir exactly like `run`, then checks that the untouched fixture fails, `reference/correct` passes and `reference/stale` fails.
@@ -69,6 +71,18 @@ Run on 2026-11-23 and 2026-11-24 with Claude Code (model alias `sonnet`), five r
 | React Router 8 | one pass | 3/5 (53k tokens) | 5/5 (77k tokens) | not run |
 | Astro 7 | one pass | 5/5 (161k tokens) | 4/5 (148k tokens) | not run |
 | TypeScript 6 | one pass | 5/5 (37k tokens) | 5/5 (52k tokens) | not run |
+
+### Where the instruction lives
+
+One pass, five runs per cell, same model. The Context7 arm got the same line either in the task prompt or in a `CLAUDE.md` in the project folder.
+
+| Library | Plain agent | Line in the prompt | Line in CLAUDE.md |
+| --- | --- | --- | --- |
+| Vitest 5 | 0/5 | 5/5 | 0/5 |
+| SvelteKit 3 | 4/5 | 5/5 | 2/5 |
+| React Router 8 | 3/5 | 5/5 | 4/5 |
+
+With the line in `CLAUDE.md` the agent called Context7 once per run, always to resolve the library and never to read its docs. Raw runs are in `runs/claudemd-oneshot/`. Small sample and one model, so read it as a signal.
 
 What this does and does not show:
 

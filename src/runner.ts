@@ -9,7 +9,7 @@ import { createAiSdkDriver } from "./drivers/ai-sdk.js";
 import { createClaudeCodeDriver } from "./drivers/claude-code.js";
 import type { Driver } from "./drivers/types.js";
 import { out } from "./logger.js";
-import { buildPrompt } from "./prompt.js";
+import { buildPrompt, instructionsFile } from "./prompt.js";
 import { cleanEnv, execCapture, truncate } from "./sandbox.js";
 import { REPO_ROOT, validateRun, type Run } from "./schema.js";
 import type { LoadedSubject } from "./subjects.js";
@@ -126,12 +126,14 @@ export async function runOne(input: RunOneInput): Promise<{ run: Run; path: stri
   const { subject, config } = input;
   const maxSteps = config.maxStepsOverride ?? subject.subject.maxSteps;
   const workdir = await prepareWorkdir(subject, config);
+  const instructions = instructionsFile(input.arm, config.docsHint, config.docsHintPlacement);
+  if (instructions) await writeFile(join(workdir, "CLAUDE.md"), instructions);
   try {
     const startedAt = new Date().toISOString();
     const t0 = Date.now();
     const result = await input.driver({
       workdir,
-      prompt: buildPrompt(subject.taskText, input.mode, input.arm, config.docsHint),
+      prompt: buildPrompt(subject.taskText, input.mode, input.arm, config.docsHint, config.docsHintPlacement),
       arm: input.arm,
       mode: input.mode,
       model: input.model,
